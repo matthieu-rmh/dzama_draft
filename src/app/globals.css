@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: "Playfair Display", Georgia, serif;
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
+}
+
+body {
+  font-family: "Montserrat", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f0e0e;
+  color: #f5f0e8;
+  font-family: var(--font-montserrat);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .section-label {
+    @apply font-sans text-dzama-gold text-xs tracking-widest2 uppercase mb-2;
+  }
+
+  .section-title {
+    @apply font-serif text-dzama-cream text-4xl md:text-5xl font-bold tracking-wide uppercase;
+  }
+
+  .btn-primary {
+    @apply inline-block border border-dzama-cream text-dzama-cream font-sans text-xs tracking-widest uppercase px-8 py-3 hover:bg-dzama-cream hover:text-dzama-dark transition-colors duration-300;
+  }
+
+  .btn-gold {
+    @apply inline-block border border-dzama-gold text-dzama-gold font-sans text-xs tracking-widest uppercase px-8 py-3 hover:bg-dzama-gold hover:text-dzama-dark transition-colors duration-300;
+  }
+
+  .divider-gold {
+    @apply w-12 h-px bg-dzama-gold my-4;
+  }
+}
