@@ -19,7 +19,7 @@ export default function Navbar() {
           <a className="text-stone-400 hover:text-stone-200 transition-colors" href="#">
             Collections
           </a>
-          <a className="text-stone-400 hover:text-stone-200 transition-colors" href="#">
+          <a className="text-stone-400 hover:text-stone-200 transition-colors" href="/heritage">
             Héritage
           </a>
           <a className="text-stone-400 hover:text-stone-200 transition-colors" href="#">

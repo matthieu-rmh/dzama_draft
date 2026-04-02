@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#3b4950",
+              "error-container": "#93000a",
+              "on-primary-fixed-variant": "#594400",
+              "on-tertiary-fixed": "#0f1d24",
+              "on-secondary": "#00315d",
+              "on-primary-container": "#6e5400",
+              "surface": "#07151b",
+              "primary-fixed": "#ffdf96",
+              "inverse-on-surface": "#243239",
+              "tertiary-fixed-dim": "#bac9d1",
+              "tertiary": "#ddecf5",
+              "surface-container": "#132128",
+              "surface-container-lowest": "#031016",
+              "background": "#07151b",
+              "surface-container-highest": "#29373e",
+              "error": "#ffb4ab",
+              "tertiary-fixed": "#d6e5ee",
+              "on-secondary-fixed": "#001c39",
+              "secondary-fixed": "#d4e3ff",
+              "surface-container-low": "#0f1d24",
+              "on-error": "#690005",
+              "primary-fixed-dim": "#f6bf00",
+              "on-primary-fixed": "#251a00",
+              "on-secondary-fixed-variant": "#004883",
+              "tertiary-container": "#c1d0d9",
+              "secondary-container": "#0164b4",
+              "on-primary": "#3e2e00",
+              "inverse-primary": "#765a00",
+              "on-surface": "#d6e5ee",
+              "surface-container-high": "#1e2c33",
+              "secondary": "#a4c9ff",
+              "outline-variant": "#4f4632",
+              "surface-bright": "#2d3b42",
+              "outline": "#9b8f78",
+              "on-error-container": "#ffdad6",
+              "primary": "#ffe8b7",
+              "on-tertiary": "#243239",
+              "surface-variant": "#29373e",
+              "surface-tint": "#f6bf00",
+              "inverse-surface": "#d6e5ee",
+              "on-tertiary-container": "#4b5961",
+              "on-surface-variant": "#d3c5ab",
+              "primary-container": "#ffc600",
+              "surface-dim": "#07151b",
+              "secondary-fixed-dim": "#a4c9ff",
+              "on-secondary-container": "#d0e1ff",
+              "on-background": "#d6e5ee"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(7, 21, 27, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .no-line-rule { border: none !important; }
+        .amber-gradient {
+            background: linear-gradient(45deg, #f6bf00 0%, #ffe8b7 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-6 max-w-full bg-[#07151b] backdrop-blur-md bg-opacity-80 no-line-rule">
+<div class="text-2xl font-bold text-[#ffc600] tracking-widest font-['Noto_Serif']">Dzama</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-['Noto_Serif'] tracking-tight text-[#ffe8b7] border-b-2 border-[#f6bf00] pb-1" href="#">Heritage</a>
+<a class="font-['Noto_Serif'] tracking-tight text-[#d3c5ab] hover:text-[#ffe8b7] transition-colors duration-300" href="#">Terroir</a>
+<a class="font-['Noto_Serif'] tracking-tight text-[#d3c5ab] hover:text-[#ffe8b7] transition-colors duration-300" href="#">Process</a>
+<a class="font-['Noto_Serif'] tracking-tight text-[#d3c5ab] hover:text-[#ffe8b7] transition-colors duration-300" href="#">Collections</a>
+<a class="font-['Noto_Serif'] tracking-tight text-[#d3c5ab] hover:text-[#ffe8b7] transition-colors duration-300" href="#">The Distillery</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#ffc600] scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="md:hidden text-[#ffc600]">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 grayscale-[0.2]" data-alt="cinematic wide shot of Madagascan coastline with rugged cliffs and turquoise ocean waves at sunset under a golden sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWlKWZFnT3EluAvFSMAQn8pw8pz950dph1e78vJcVD5nYNyN_hIASkcZbd6OABBTzpQct0zG7hQM0ue0rOdBE4WI0leMEuAE4fYq6omdjpKb_ybF4KEMQCcdDpwFmREYdOis7MwK812oFNX9u4KGptyxZztcJIn7am2llgJZfnewZUFeR8AJotDCaeHX0hrQsAsA0U3e0KpYi3_wih3JSWw1wXlqdY4XsqTa10F19qTtV23qLexIC4AUFq9sFD2N2-vjmuo0_8uVs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/40"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<span class="font-label text-[#ffc600] tracking-[0.3em] uppercase text-sm mb-6 block">Legacy of the Red Island</span>
+<h1 class="font-headline text-6xl md:text-8xl text-primary mb-8 leading-tight tracking-tight">The Dzama Heritage</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto font-light leading-relaxed">
+                    A story etched in volcanic soil and distilled by the soul of Madagascar. Experience the patience of the island.
+                </p>
+<div class="mt-12 flex justify-center">
+<div class="w-px h-24 bg-gradient-to-b from-primary-container to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: The Story (Editorial Layout) -->
+<section class="py-24 md:py-48 px-6 md:px-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[3/4] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-80 mix-blend-luminosity" data-alt="high contrast black and white portrait of an artisan distillery owner in 1980s attire with a focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3QxPjrgRfgmEQp0JCjat35gvf2xWz5DFw3oPwIDCU-zjJGyJxgFIuOtXQBejomoneGv47SoIm8De7YKZw5NpemcYtiHjkUTzs2b94vzhcxR2TJbFrYrjKt9Punk-IMyMNV4jRQpgy7IqwzstqJbpf3Mhmvc6ybW1pdTxxhMvOo1azFJjhEq3xYAvNGw8nNtTW5UTcO4DSsNzBd7ZSwo0PRQyFEpwoM-BHMcVqZSsGR9_Y-pcNqTPRQlbzUFyyBPPLevj8rD6ExEs"/>
+</div>
+<div class="absolute -bottom-10 -right-10 md:-right-20 w-64 aspect-square bg-surface-container-highest p-4 hidden md:block">
+<img class="w-full h-full object-cover" data-alt="close up macro shot of amber rhum swirling in a crystal glass with dramatic golden lighting and dark shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9mK7HsvZ72sy8oN6PVLUAXO9VyQleDlJm4lor8v0i4yXcBipVkpAMAg0MbXB0jSrkXJC1T_zQpBN9LBRVFdXqNCj10j1o41h7gFH8Py69ihPKUrmB2dEeTI1smnmSDUM8SVLAZf0IR0TVQbeh8c-fyQYrrlLdVZzKfhfeiIuY-Eh1UpIy2cXSmM4wuc5lJiIuRMBzmMl9nhqNTzNK0YrmgQHV4ptoo4ii40jFVE5Yv04IF6a0kmWm2Y91cvbzA7bNOvKMnEyrKl0"/>
+</div>
+</div>
+<div class="md:col-span-7 space-y-8">
+<h2 class="font-headline text-5xl md:text-6xl text-[#ffc600]">The Story</h2>
+<div class="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
+<p class="first-letter:text-7xl first-letter:font-headline first-letter:text-primary first-letter:mr-3 first-letter:float-left">
+                            In 1980, on the remote islands of Madagascar, Lucien Fohine founded Dzama Rhum with a vision that transcended mere production. He sought to capture the very essence of the terroir, creating a liquid narrative of the island's unique botanical wealth.
+                        </p>
+<p>
+                            What began as a local pursuit in the northern reaches of the island soon evolved into a standard-bearer for premium spirits globally. Lucien's obsession with quality meant that every batch had to reflect the specific conditions of its birth, from the sugarcane grown in volcanic earth to the aromatic influences of wild ylang-ylang.
+                        </p>
+<div class="pt-8">
+<button class="px-8 py-4 amber-gradient text-on-primary font-bold uppercase tracking-widest text-xs rounded-md shadow-2xl hover:brightness-110 transition-all">
+                                Discover the Timeline
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: The Terroir (Bento-style Grid) -->
+<section class="py-24 md:py-48 px-6 md:px-24 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-24 text-center md:text-left">
+<h2 class="font-headline text-5xl md:text-7xl text-primary mb-6">The Terroir</h2>
+<p class="font-body text-on-surface-variant max-w-xl text-lg">Nosy Boraha: Where volcanic minerals meet the tropical trade winds.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 bg-surface-container rounded-lg p-12 flex flex-col justify-between min-h-[400px]">
+<h3 class="font-headline text-3xl text-primary-fixed mb-4">Volcanic Foundations</h3>
+<p class="text-on-surface-variant text-lg max-w-md">The nutrient-dense volcanic soil of Madagascar imparts a distinct mineral complexity to our sugarcane, a profile found nowhere else on earth.</p>
+<div class="mt-8 h-48 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="majestic volcanic mountain peak shrouded in morning mist with lush tropical jungle at its base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbbgS-_Bu0NzQJjb4xZ9ZIqEMUWNjbNx16DNCbsHViiVPa-J-AXv2sV8aESxUHvDz2l1PdjILOVXvWrX4DlgJeCuPVlyQxXQbQbnhVHNNmIemS4uoafFaGcIMB_FIkItTlhJ7YewM6EgtUYAAW8l89jfyDAfDb-UamIZp4ZL2qExn6z9VwYkA7n9jA0SRoMhRlHhUB6cWLC3W_2zQi5HJNNEhvvFS6Shtp4rLwqiJJ0EsVtpCulsNNgdHFtFPJ7X83bsWTBT0mLPo"/>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg overflow-hidden group">
+<div class="h-full w-full relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="vibrant green sugarcane field swaying in the wind under a bright tropical sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiwrcW_ewnvBkHXTVkWCLS2FeEy4iMLm1H6ckKPpf3KdWD1ZasIVmJpxgbi7MBbLUoyg_GPNxBeYTHfoB6bwLQKzuZ0lH8Gh5BZt_oAK384nb5mqc2yv6Fz7HjNiJxFzl57CI2DpeTaG65D_Sii5M4rBtCUR-r5I07gbQ5CXc1d8oQ7WRPEx4-mrJvntf6YdiLxy-7vrj7eyJTsErFXPJSYS9a7jCWtnpvP-nMQssBl5KABU15Z2_NXfXN6AtqVSusPUiY7Kk2H48"/>
+<div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end">
+<h3 class="font-headline text-2xl text-white">Island Microclimate</h3>
+<p class="text-white/80 text-sm mt-2">Humid, salted air that breathes into the aging casks.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Traditional Craft -->
+<section class="py-24 md:py-48 px-6 md:px-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-24 items-center">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<h2 class="font-headline text-5xl md:text-6xl text-[#ffc600] mb-12">Traditional Craft</h2>
+<div class="space-y-16">
+<div class="flex gap-8">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-headline text-primary">01</div>
+<div>
+<h4 class="font-headline text-2xl text-primary mb-3">Double Distillation</h4>
+<p class="text-on-surface-variant leading-relaxed">Our spirit is born in small-batch copper pot stills. This double distillation process ensures only the purest "heart" of the rhum is retained, concentrating the aromatic esters of the island.</p>
+</div>
+</div>
+<div class="flex gap-8">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-headline text-primary">02</div>
+<div>
+<h4 class="font-headline text-2xl text-primary mb-3">Oak Cask Maturation</h4>
+<p class="text-on-surface-variant leading-relaxed">We age our reserves in Limousin oak barrels. The interaction between the spirit and the wood, accelerated by the tropical humidity, creates a deep, multi-layered profile of vanilla and spice.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+<div class="relative w-full max-w-md aspect-[4/5]">
+<div class="absolute inset-4 border border-outline-variant z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover" data-alt="gleaming copper pot still in a dim warehouse with atmospheric steam and soft focused golden highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBniddQT4g6UajYTVJy7Dkoz003vs5GtVMi-R_bPzjWZIFhrJ47zL0S0U9wTIt_fCWXmfolXGGi0U23Vma_U9jsyAp-KvnWN1EjPby__W6026enuhzaslaAt578c3pIDeEInmD9jKuWSdFhjot2sCO9fmmEaMgyKep037cckIWZkVtGDHd-0oayDq41PfsD2wmeAmX63t1aconCU8QmvfpH04kCZwN0QJI-44ds2jwUzdOUVDw_FJO4YMiVDOHI4xQT6ouQtPiy0pY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Timeline Grid -->
+<section class="py-24 md:py-48 px-6 md:px-24 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<span class="font-label text-outline text-xs tracking-widest uppercase mb-4 block">Chronicles</span>
+<h2 class="font-headline text-5xl text-primary">Milestones of Excellence</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+<!-- Milestone 1 -->
+<div class="bg-surface-container p-10 hover:bg-surface-container-high transition-colors duration-300">
+<span class="font-headline text-4xl text-[#ffc600] mb-6 block">1980</span>
+<h5 class="font-bold text-sm uppercase tracking-widest text-on-surface mb-4">Foundation</h5>
+<p class="text-on-surface-variant text-sm">Lucien Fohine establishes the first boutique distillery in the north of Madagascar.</p>
+</div>
+<!-- Milestone 2 -->
+<div class="bg-surface-container-low p-10 hover:bg-surface-container-high transition-colors duration-300">
+<span class="font-headline text-4xl text-[#ffc600] mb-6 block">1996</span>
+<h5 class="font-bold text-sm uppercase tracking-widest text-on-surface mb-4">Expansion</h5>
+<p class="text-on-surface-variant text-sm">Introduction of the Prestige range, earning the brand its first international gold medals.</p>
+</div>
+<!-- Milestone 3 -->
+<div class="bg-surface-container p-10 hover:bg-surface-container-high transition-colors duration-300">
+<span class="font-headline text-4xl text-[#ffc600] mb-6 block">2012</span>
+<h5 class="font-bold text-sm uppercase tracking-widest text-on-surface mb-4">Innovation</h5>
+<p class="text-on-surface-variant text-sm">Pioneering the use of aromatic island botanicals in the infusion aging process.</p>
+</div>
+<!-- Milestone 4 -->
+<div class="bg-surface-container-low p-10 hover:bg-surface-container-high transition-colors duration-300">
+<span class="font-headline text-4xl text-[#ffc600] mb-6 block">2024</span>
+<h5 class="font-bold text-sm uppercase tracking-widest text-on-surface mb-4">Legacy</h5>
+<p class="text-on-surface-variant text-sm">Continuing the tradition as Madagascar's most awarded rhum producer.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#4f4632]/15 bg-[#031016] flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<div class="text-lg font-bold text-[#f6bf00] font-['Noto_Serif'] tracking-widest">Dzama</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#9b8f78] hover:text-[#ffe8b7] transition-all" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#9b8f78] hover:text-[#ffe8b7] transition-all" href="#">Terms of Service</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#9b8f78] hover:text-[#ffe8b7] transition-all" href="#">Distributor Portal</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#9b8f78] hover:text-[#ffe8b7] transition-all" href="#">Sustainability</a>
+</div>
+<div class="font-['Manrope'] text-xs tracking-widest text-[#9b8f78] uppercase text-center md:text-right">
+            © 2024 Dzama Rhum. Crafted with patience in Madagascar.
+        </div>
+</footer>
+</body></html>
