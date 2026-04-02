@@ -2,45 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-playfair: "Playfair Display", Georgia, serif;
-  --font-great-vibes: "Great Vibes", cursive;
-  --font-montserrat: "Montserrat", system-ui, sans-serif;
-}
-
 body {
-  font-family: "Montserrat", system-ui, sans-serif;
+  font-family: "Raleway", system-ui, sans-serif;
+  background-color: #07151b;
+  color: #d6e5ee;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #0f0e0e;
-  color: #f5f0e8;
-  font-family: var(--font-montserrat);
-  -webkit-font-smoothing: antialiased;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
 }
 
-@layer components {
-  .section-label {
-    @apply font-sans text-dzama-gold text-xs tracking-widest2 uppercase mb-2;
+@layer utilities {
+  .amber-glow {
+    filter: drop-shadow(0 0 15px rgba(255, 198, 0, 0.3));
   }
 
-  .section-title {
-    @apply font-serif text-dzama-cream text-4xl md:text-5xl font-bold tracking-wide uppercase;
-  }
-
-  .btn-primary {
-    @apply inline-block border border-dzama-cream text-dzama-cream font-sans text-xs tracking-widest uppercase px-8 py-3 hover:bg-dzama-cream hover:text-dzama-dark transition-colors duration-300;
-  }
-
-  .btn-gold {
-    @apply inline-block border border-dzama-gold text-dzama-gold font-sans text-xs tracking-widest uppercase px-8 py-3 hover:bg-dzama-gold hover:text-dzama-dark transition-colors duration-300;
-  }
-
-  .divider-gold {
-    @apply w-12 h-px bg-dzama-gold my-4;
+  .glass-panel {
+    background: rgba(19, 33, 40, 0.8);
+    backdrop-filter: blur(20px);
   }
 }

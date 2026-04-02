@@ -1,9 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import ValuesSection from "./components/ValuesSection";
-import StatsSection from "./components/StatsSection";
-import ProductsSection from "./components/ProductsSection";
-import QuoteSection from "./components/QuoteSection";
+import FeaturedCollection from "./components/FeaturedCollection";
+import TerroirSection from "./components/TerroirSection";
+import NewsletterSection from "./components/NewsletterSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -11,10 +10,9 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <StatsSection />
-      <ValuesSection />
-      <ProductsSection />
-      <QuoteSection />
+      <FeaturedCollection />
+      <TerroirSection />
+      <NewsletterSection />
       <Footer />
     </main>
   );
