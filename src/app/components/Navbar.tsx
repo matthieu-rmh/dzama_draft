@@ -37,7 +37,7 @@ export default function Navbar() {
             alt="Dzama Rhum"
             width={112}
             height={112}
-            className="h-14 w-auto object-contain"
+            className={`h-14 w-auto object-contain transition-all duration-300 ${pathname === "/" ? "drop-shadow-[0_0_8px_rgba(251,191,36,0.8)]" : ""}`}
             priority
           />
         </a>

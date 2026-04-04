@@ -38,9 +38,9 @@ export default function Hero() {
           </FadeIn>
           <FadeIn delay={450}>
             <div className="flex items-center space-x-8">
-              <button className="px-10 py-4 bg-gradient-to-r from-primary-fixed-dim to-primary text-on-primary font-bold rounded-md hover:scale-105 transition-transform duration-300">
+              <a href="/cellar" className="px-10 py-4 bg-gradient-to-r from-primary-fixed-dim to-primary text-on-primary font-bold rounded-md hover:scale-105 transition-transform duration-300">
                 Explorer les Collections
-              </button>
+              </a>
               <a href="/heritage" className="px-10 py-4 border border-outline/30 text-primary font-bold rounded-md hover:bg-white/5 transition-all">
                 Notre Héritage
               </a>
