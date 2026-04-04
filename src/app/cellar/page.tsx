@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FadeIn from "../components/FadeIn";
 import { ALL_PRODUCTS, type Sweetness } from "./products";
 
 const AGE_BUCKETS: { label: string; test: (age: number) => boolean }[] = [
@@ -82,7 +83,7 @@ export default function CellarPage() {
       <main className="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
 
         {/* Header & Breadcrumbs */}
-        <header className="mb-16">
+        <FadeIn><header className="mb-16">
           <nav className="mb-4 flex items-center space-x-2 font-label text-[10px] uppercase tracking-[0.2em] text-outline">
             <a className="hover:text-primary transition-colors" href="/">Accueil</a>
             <span className="material-symbols-outlined text-[12px]">chevron_right</span>
@@ -96,7 +97,7 @@ export default function CellarPage() {
             témoignage de l&apos;art patient du vieillissement tropical et du terroir unique de
             l&apos;île.
           </p>
-        </header>
+        </header></FadeIn>
 
         <div className="flex flex-col lg:flex-row gap-16">
 
@@ -210,8 +211,9 @@ export default function CellarPage() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-24 gap-x-12">
-                {paginated.map((product) => (
-                  <Link key={product.id} href={`/cellar/${product.id}`} className="group relative block">
+                {paginated.map((product, i) => (
+                  <FadeIn key={product.id} delay={i * 100}>
+                  <Link href={`/cellar/${product.id}`} className="group relative block">
                     <div className="aspect-[3/4] bg-surface-container-low overflow-hidden relative mb-6">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
@@ -249,6 +251,7 @@ export default function CellarPage() {
                       </div>
                     </div>
                   </Link>
+                  </FadeIn>
                 ))}
               </div>
             )}

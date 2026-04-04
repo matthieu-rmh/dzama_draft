@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FadeIn from "../components/FadeIn";
 
 type Category = "Tous" | "Classiques" | "Modernes" | "Vieux Rhums";
 
@@ -79,30 +80,38 @@ export default function CocktailsPage() {
           />
         </div>
         <div className="relative z-10 text-center px-6 max-w-5xl">
-          <span className="block font-label text-primary uppercase tracking-[0.4em] mb-4 text-sm">
-            Le Savoir-Faire Malgache
-          </span>
-          <h1 className="font-serif text-6xl md:text-8xl text-primary-container leading-tight mb-8">
-            Art de la Mixologie
-          </h1>
-          <p className="font-body text-xl md:text-2xl text-on-surface max-w-2xl mx-auto font-light leading-relaxed">
-            Une symphonie de saveurs où l&apos;âme de Madagascar rencontre l&apos;élégance du verre.
-          </p>
-          <div className="mt-12">
-            <a
-              href="#recipes"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-fixed-dim to-primary text-on-primary font-bold rounded-md hover:scale-[0.98] transition-transform duration-300"
-            >
-              Explorer les Recettes
-              <span className="material-symbols-outlined">arrow_downward</span>
-            </a>
-          </div>
+          <FadeIn delay={0}>
+            <span className="block font-label text-primary uppercase tracking-[0.4em] mb-4 text-sm">
+              Le Savoir-Faire Malgache
+            </span>
+          </FadeIn>
+          <FadeIn delay={150}>
+            <h1 className="font-serif text-6xl md:text-8xl text-primary-container leading-tight mb-8">
+              Art de la Mixologie
+            </h1>
+          </FadeIn>
+          <FadeIn delay={300}>
+            <p className="font-body text-xl md:text-2xl text-on-surface max-w-2xl mx-auto font-light leading-relaxed">
+              Une symphonie de saveurs où l&apos;âme de Madagascar rencontre l&apos;élégance du verre.
+            </p>
+          </FadeIn>
+          <FadeIn delay={450}>
+            <div className="mt-12">
+              <a
+                href="#recipes"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-primary-fixed-dim to-primary text-on-primary font-bold rounded-md hover:scale-[0.98] transition-transform duration-300"
+              >
+                Explorer les Recettes
+                <span className="material-symbols-outlined">arrow_downward</span>
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Filter bar */}
       <section className="py-12 bg-surface-container-low">
-        <div className="max-w-screen-2xl mx-auto px-12 flex flex-col md:flex-row justify-between items-baseline gap-6">
+        <FadeIn className="max-w-screen-2xl mx-auto px-12 flex flex-col md:flex-row justify-between items-baseline gap-6">
           <h2 className="font-serif text-4xl text-on-surface">Cocktails Signature</h2>
           <div className="flex gap-8 font-label text-xs uppercase tracking-widest text-outline">
             {CATEGORIES.map((cat) => (
@@ -119,7 +128,7 @@ export default function CocktailsPage() {
               </button>
             ))}
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* Recipe grid */}
@@ -131,10 +140,11 @@ export default function CocktailsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
-            {filtered.map((cocktail) => (
-              <div
+            {filtered.map((cocktail, i) => (
+              <FadeIn
                 key={cocktail.id}
                 className={`group cursor-pointer ${cocktail.stagger ? "md:mt-12" : ""}`}
+                delay={i * 150}
               >
                 <div className="aspect-[4/5] bg-surface-container-low mb-8 overflow-hidden relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -160,7 +170,7 @@ export default function CocktailsPage() {
                     Détails de la recette
                   </a>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         )}
@@ -169,7 +179,7 @@ export default function CocktailsPage() {
       {/* Focus Recipe */}
       <section className="bg-surface-container py-32" id="focus">
         <div className="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <div className="relative">
+          <FadeIn direction="left"><div className="relative">
             <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -180,9 +190,9 @@ export default function CocktailsPage() {
             <div className="absolute -bottom-8 -right-8 bg-surface-bright p-8 border border-outline-variant/15 z-20">
               <p className="font-serif italic text-2xl text-primary">&ldquo;Le secret réside dans le repos.&rdquo;</p>
             </div>
-          </div>
+          </div></FadeIn>
 
-          <div className="space-y-12">
+          <FadeIn direction="right" delay={150}><div className="space-y-12">
             <header>
               <span className="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">
                 Focus sur la Recette
@@ -231,7 +241,7 @@ export default function CocktailsPage() {
                 Partager la Recette
               </button>
             </div>
-          </div>
+          </div></FadeIn>
         </div>
       </section>
 
@@ -245,7 +255,7 @@ export default function CocktailsPage() {
             className="w-full h-full object-cover brightness-[0.3]"
           />
         </div>
-        <div className="relative z-10 px-6">
+        <FadeIn className="relative z-10 px-6">
           <h2 className="font-serif text-5xl md:text-6xl text-on-surface mb-8">Au-delà du mélange</h2>
           <p className="font-body text-xl text-on-surface-variant max-w-xl mx-auto mb-12">
             Découvrez l&apos;histoire de notre distillation et les secrets de notre terroir unique à Madagascar.
@@ -256,7 +266,7 @@ export default function CocktailsPage() {
           >
             Notre Histoire
           </a>
-        </div>
+        </FadeIn>
       </section>
 
       <Footer />

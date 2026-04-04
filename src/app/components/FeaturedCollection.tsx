@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 const products = [
   {
     id: 1,
@@ -43,8 +45,7 @@ const products = [
 export default function FeaturedCollection() {
   return (
     <section className="py-32 px-12 max-w-screen-2xl mx-auto">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+      <FadeIn className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
         <div className="max-w-xl">
           <h2 className="text-5xl font-serif mb-6">La Réserve de la Cave</h2>
           <p className="text-on-surface-variant leading-relaxed">
@@ -59,14 +60,14 @@ export default function FeaturedCollection() {
         >
           Voir toutes les collections
         </a>
-      </div>
+      </FadeIn>
 
-      {/* Asymmetric product grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        {products.map((product) => (
-          <div
+        {products.map((product, i) => (
+          <FadeIn
             key={product.id}
             className={`${product.colSpan} ${product.translateY} group cursor-pointer`}
+            delay={i * 150}
           >
             <div
               className={`${product.bgClass} aspect-[3/4] ${product.padding} flex items-center justify-center relative overflow-hidden`}
@@ -92,7 +93,7 @@ export default function FeaturedCollection() {
                 {product.notes}
               </p>
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </section>

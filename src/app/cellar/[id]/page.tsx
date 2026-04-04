@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { ALL_PRODUCTS } from "../products";
 import AddToCartButton from "./AddToCartButton";
+import FadeIn from "../../components/FadeIn";
 
 const PAIRINGS = [
   {
@@ -53,7 +54,7 @@ export default async function ProductDetailPage({
         {/* Hero Product Section */}
         <section className="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
           {/* Left: Product Image */}
-          <div className="md:col-span-7 flex justify-center relative">
+          <FadeIn className="md:col-span-7 flex justify-center relative" direction="left">
             <div className="absolute inset-0 bg-surface-container-low -z-10 translate-x-4 translate-y-4" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -61,10 +62,10 @@ export default async function ProductDetailPage({
               alt={product.name}
               className="w-full h-auto max-h-[819px] object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]"
             />
-          </div>
+          </FadeIn>
 
           {/* Right: Product Details */}
-          <div className="md:col-span-5 space-y-10">
+          <FadeIn className="md:col-span-5 space-y-10" direction="right" delay={150}>
             <div className="space-y-4">
               <span className="font-label text-sm tracking-[0.2em] uppercase text-primary">
                 {product.collection}
@@ -108,11 +109,11 @@ export default async function ProductDetailPage({
                 <p className="text-sm">Inclut un certificat d&apos;authenticité &amp; carafe numérotée à la main</p>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* Editorial Section */}
-        <section className="mt-48 bg-surface-container-low py-32 overflow-hidden">
+        <FadeIn><section className="mt-48 bg-surface-container-low py-32 overflow-hidden">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
               <div className="z-10 space-y-8">
@@ -139,10 +140,10 @@ export default async function ProductDetailPage({
               </div>
             </div>
           </div>
-        </section>
+        </section></FadeIn>
 
         {/* Perfect Pairings */}
-        <section className="py-32 max-w-screen-2xl mx-auto px-6 md:px-12">
+        <FadeIn><section className="py-32 max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="mb-16 flex justify-between items-end">
             <div className="space-y-4">
               <span className="font-label text-sm tracking-[0.2em] uppercase text-outline">Sublimer l&apos;Expérience</span>
@@ -168,9 +169,10 @@ export default async function ProductDetailPage({
             ))}
           </div>
         </section>
+      </FadeIn>
 
         {/* Technical Specifications */}
-        <section className="py-32 border-t border-outline-variant/10">
+        <FadeIn><section className="py-32 border-t border-outline-variant/10">
           <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-24">
             <div className="space-y-12">
               <h2 className="font-serif text-3xl text-on-surface">Les Notes du Distillateur</h2>
@@ -205,7 +207,7 @@ export default async function ProductDetailPage({
               </button>
             </div>
           </div>
-        </section>
+        </section></FadeIn>
 
       </main>
       <Footer />

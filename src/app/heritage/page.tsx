@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import FadeIn from "../components/FadeIn";
 
 const milestones = [
   {
@@ -45,16 +46,22 @@ export default function HeritagePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/40" />
           </div>
           <div className="relative z-10 text-center px-6 max-w-4xl">
-            <span className="font-label text-primary-container tracking-[0.3em] uppercase text-sm mb-6 block">
-              L&apos;Île Rouge
-            </span>
-            <h1 className="font-serif text-6xl md:text-8xl text-primary mb-8 leading-tight tracking-tight">
-              L&apos;Héritage Dzama
-            </h1>
-            <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto font-light leading-relaxed">
-              Une histoire gravée dans le sol volcanique et distillée par l&apos;âme
-              de Madagascar. Vivez la patience de l&apos;île.
-            </p>
+            <FadeIn delay={0}>
+              <span className="font-label text-primary-container tracking-[0.3em] uppercase text-sm mb-6 block">
+                L&apos;Île Rouge
+              </span>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <h1 className="font-serif text-6xl md:text-8xl text-primary mb-8 leading-tight tracking-tight">
+                L&apos;Héritage Dzama
+              </h1>
+            </FadeIn>
+            <FadeIn delay={300}>
+              <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto font-light leading-relaxed">
+                Une histoire gravée dans le sol volcanique et distillée par l&apos;âme
+                de Madagascar. Vivez la patience de l&apos;île.
+              </p>
+            </FadeIn>
             <div className="mt-12 flex justify-center">
               <div className="w-px h-24 bg-gradient-to-b from-primary-container to-transparent" />
             </div>
@@ -64,8 +71,7 @@ export default function HeritagePage() {
         {/* The Story */}
         <section className="py-24 md:py-48 px-6 md:px-24 bg-surface-container-low overflow-hidden">
           <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-16 items-center">
-            {/* Image column */}
-            <div className="md:col-span-5 relative">
+            <FadeIn className="md:col-span-5 relative" direction="left">
               <div className="aspect-[3/4] bg-surface-container-high overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -82,10 +88,9 @@ export default function HeritagePage() {
                   alt="Fûts de vieillissement Dzama"
                 />
               </div>
-            </div>
+            </FadeIn>
 
-            {/* Text column */}
-            <div className="md:col-span-7 space-y-8">
+            <FadeIn className="md:col-span-7 space-y-8" direction="right" delay={150}>
               <h2 className="font-serif text-5xl md:text-6xl text-primary-container">
                 L&apos;Histoire
               </h2>
@@ -111,28 +116,23 @@ export default function HeritagePage() {
                   </a>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </section>
 
         {/* The Terroir */}
         <section className="py-24 md:py-48 px-6 md:px-24 bg-surface">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-24 text-center md:text-left">
-              <h2 className="font-serif text-5xl md:text-7xl text-primary mb-6">
-                Le Terroir
-              </h2>
+            <FadeIn className="mb-24 text-center md:text-left">
+              <h2 className="font-serif text-5xl md:text-7xl text-primary mb-6">Le Terroir</h2>
               <p className="font-body text-on-surface-variant max-w-xl text-lg">
-                Nosy Boraha : là où les minéraux volcaniques rencontrent les alizés
-                tropicaux.
+                Nosy Boraha : là où les minéraux volcaniques rencontrent les alizés tropicaux.
               </p>
-            </div>
+            </FadeIn>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="md:col-span-2 bg-surface-container p-12 flex flex-col justify-between min-h-[400px]">
+              <FadeIn className="md:col-span-2 bg-surface-container p-12 flex flex-col justify-between min-h-[400px]" direction="left">
                 <div>
-                  <h3 className="font-serif text-3xl text-primary-fixed mb-4">
-                    Fondations Volcaniques
-                  </h3>
+                  <h3 className="font-serif text-3xl text-primary-fixed mb-4">Fondations Volcaniques</h3>
                   <p className="text-on-surface-variant text-lg max-w-md">
                     Le sol volcanique riche en nutriments de Madagascar confère une
                     complexité minérale distincte à notre canne à sucre, un profil
@@ -147,8 +147,8 @@ export default function HeritagePage() {
                     alt="Montagne volcanique malgache"
                   />
                 </div>
-              </div>
-              <div className="bg-surface-container overflow-hidden group relative">
+              </FadeIn>
+              <FadeIn className="bg-surface-container overflow-hidden group relative" direction="right" delay={150}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -156,14 +156,10 @@ export default function HeritagePage() {
                   alt="Champ de canne à sucre à Madagascar"
                 />
                 <div className="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end">
-                  <h3 className="font-serif text-2xl text-white">
-                    Microclimat Insulaire
-                  </h3>
-                  <p className="text-white/80 text-sm mt-2">
-                    Un air humide et salé qui pénètre dans les fûts de vieillissement.
-                  </p>
+                  <h3 className="font-serif text-2xl text-white">Microclimat Insulaire</h3>
+                  <p className="text-white/80 text-sm mt-2">Un air humide et salé qui pénètre dans les fûts de vieillissement.</p>
                 </div>
-              </div>
+              </FadeIn>
             </div>
           </div>
         </section>
@@ -171,19 +167,13 @@ export default function HeritagePage() {
         {/* Traditional Craft */}
         <section className="py-24 md:py-48 px-6 md:px-24 bg-surface-container-lowest">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24 items-center">
-            <div className="w-full md:w-1/2 order-2 md:order-1">
-              <h2 className="font-serif text-5xl md:text-6xl text-primary-container mb-12">
-                Savoir-Faire Traditionnel
-              </h2>
+            <FadeIn className="w-full md:w-1/2 order-2 md:order-1" direction="left">
+              <h2 className="font-serif text-5xl md:text-6xl text-primary-container mb-12">Savoir-Faire Traditionnel</h2>
               <div className="space-y-16">
                 <div className="flex gap-8">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-serif text-primary">
-                    01
-                  </div>
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-serif text-primary">01</div>
                   <div>
-                    <h4 className="font-serif text-2xl text-primary mb-3">
-                      Double Distillation
-                    </h4>
+                    <h4 className="font-serif text-2xl text-primary mb-3">Double Distillation</h4>
                     <p className="text-on-surface-variant leading-relaxed">
                       Notre spiritueux naît dans de petits alambics en cuivre. Ce
                       procédé de double distillation garantit que seul le
@@ -193,13 +183,9 @@ export default function HeritagePage() {
                   </div>
                 </div>
                 <div className="flex gap-8">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-serif text-primary">
-                    02
-                  </div>
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center font-serif text-primary">02</div>
                   <div>
-                    <h4 className="font-serif text-2xl text-primary mb-3">
-                      Maturation en Fûts de Chêne
-                    </h4>
+                    <h4 className="font-serif text-2xl text-primary mb-3">Maturation en Fûts de Chêne</h4>
                     <p className="text-on-surface-variant leading-relaxed">
                       Nos réserves vieillissent dans des barriques de chêne du
                       Limousin. L&apos;interaction entre le spiritueux et le bois,
@@ -209,8 +195,8 @@ export default function HeritagePage() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+            </FadeIn>
+            <FadeIn className="w-full md:w-1/2 order-1 md:order-2 flex justify-center" direction="right" delay={150}>
               <div className="relative w-full max-w-md aspect-[4/5]">
                 <div className="absolute inset-4 border border-outline-variant/20 z-10 pointer-events-none" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -220,55 +206,37 @@ export default function HeritagePage() {
                   alt="Alambic en cuivre dans la distillerie"
                 />
               </div>
-            </div>
+            </FadeIn>
           </div>
         </section>
 
         {/* Milestones */}
         <section id="milestones" className="py-24 md:py-48 px-6 md:px-24 bg-surface">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-24">
-              <span className="font-label text-outline text-xs tracking-widest uppercase mb-4 block">
-                Chroniques
-              </span>
-              <h2 className="font-serif text-5xl text-primary">
-                Jalons d&apos;Excellence
-              </h2>
-            </div>
+            <FadeIn className="text-center mb-24">
+              <span className="font-label text-outline text-xs tracking-widest uppercase mb-4 block">Chroniques</span>
+              <h2 className="font-serif text-5xl text-primary">Jalons d&apos;Excellence</h2>
+            </FadeIn>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
-              {milestones.map((m) => (
-                <div
-                  key={m.year}
-                  className={`${m.bg} p-10 hover:bg-surface-container-high transition-colors duration-300`}
-                >
-                  <span className="font-serif text-4xl text-primary-container mb-6 block">
-                    {m.year}
-                  </span>
-                  <h5 className="font-bold text-sm uppercase tracking-widest text-on-surface mb-4">
-                    {m.title}
-                  </h5>
-                  <p className="text-on-surface-variant text-sm">{m.body}</p>
-                </div>
+              {milestones.map((m, i) => (
+                <FadeIn key={m.year} delay={i * 120}>
+                  <div className={`${m.bg} p-10 hover:bg-surface-container-high transition-colors duration-300`}>
+                    <span className="font-serif text-4xl text-primary-container mb-6 block">{m.year}</span>
+                    <h5 className="font-bold text-sm uppercase tracking-widest text-on-surface mb-4">{m.title}</h5>
+                    <p className="text-on-surface-variant text-sm">{m.body}</p>
+                  </div>
+                </FadeIn>
               ))}
             </div>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="w-full bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
-        <div className="text-lg font-serif font-bold text-primary-fixed-dim tracking-widest">
-          Dzama
-        </div>
+        <div className="text-lg font-serif font-bold text-primary-fixed-dim tracking-widest">Dzama</div>
         <div className="flex flex-wrap justify-center gap-8">
           {["Politique de Confidentialité", "Conditions d'Utilisation", "Portail Distributeurs", "Durabilité"].map((label) => (
-            <a
-              key={label}
-              className="font-body text-sm tracking-widest uppercase text-outline hover:text-primary transition-all"
-              href="#"
-            >
-              {label}
-            </a>
+            <a key={label} className="font-body text-sm tracking-widest uppercase text-outline hover:text-primary transition-all" href="#">{label}</a>
           ))}
         </div>
         <div className="font-body text-xs tracking-widest text-outline uppercase text-center md:text-right">
