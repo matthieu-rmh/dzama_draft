@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background image with gradient overlay */}
       <div className="absolute inset-[-15%] z-0">
         <Image
-          src="/images/homepage_sections/vbz_hero_sec.jpg"
+          src="/images/homepage_sections/vdz_hero_section_upscayled.png"
           alt="Bouteille de rhum Dzama sur marbre sombre avec éclairage dramatique"
           fill
           className="object-cover object-center"
@@ -35,9 +35,9 @@ priority
             <button className="px-10 py-4 bg-gradient-to-r from-primary-fixed-dim to-primary text-on-primary font-bold rounded-md hover:scale-105 transition-transform duration-300">
               Explorer les Collections
             </button>
-            <button className="px-10 py-4 border border-outline/30 text-primary font-bold rounded-md hover:bg-white/5 transition-all">
+            <a href="/heritage" className="px-10 py-4 border border-outline/30 text-primary font-bold rounded-md hover:bg-white/5 transition-all">
               Notre Héritage
-            </button>
+            </a>
           </div>
         </div>
       </div>

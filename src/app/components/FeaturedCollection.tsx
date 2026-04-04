@@ -10,7 +10,7 @@ const products = [
     titleSize: "text-2xl",
     badge: null,
     translateY: "",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuC-jp2aJfwTxjAD1rhGnqSH4Wl41fUf4nrCoRZM5DdqpFo9YFfBXphQjVqTocM7-89w61hDjN2lW5XGEiPgr5_2HQ_juH36OdfC_cdoK-UPhH99Yt3weFPC7VM8c-eXganyLjcu_0KHAV4YGUa02CSXLsfXfl-5SgB_DH9i3BnID3OqZ5xQkkc8dggA699GYSgVZOdDCHFh3G2AVObt7JQNst7QbCgmFtrGn3R67B4PPt78WODY-fLnFtxjrnDxAqHU9Q4AZNrrfkE",
+    src: "/images/collections/vieux_rhum_15.jpeg",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const products = [
     titleSize: "text-3xl",
     badge: "Édition Limitée",
     translateY: "md:translate-y-16",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD0hyoC-gcy4tNnhleBjdoz0d9PMJHVDmAnK_7OaHBRRPn94TAcOQ3XeSy2bX7sltyCR2M-KKUXaVyza_Ei_BAclF14DXWMQUuPrmW9oodUSKK2K5o2jB-s7d7obIFqkvn0kgdn6ll6lP5_RzIByhQzXuMtAAN59tBk9XYijuS7gL4x8AuLlnnDDvroIS2PglVF8CFmh-qDI2okzKnDUh6_RxS93R0xdANLTXK2T91ULEi02xdIWQGyWdGZQbm-Aihj2VR2iaFezDM",
+    src: "/images/collections/lucien_fohine_1984.jpeg",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const products = [
     titleSize: "text-xl",
     badge: null,
     translateY: "",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDhDHah3ZLCDEdY_iEV8aNumvZX4My0Vl70jVV-hSly45wsBFn-0NRJU13pTG0m4KZV_PcL1_dKbKvJjDgIUUWMvP6_RnK2x27D1XdtwdOCEMcw5lwC3nzyRSWdVxVJB258oWr0RiNwS-oiVpx_KyWnik4oRAZRyo8uQtUZ2oBqqtP4K4MWmB56bKgbgucH_VnOYtefS4CrgKDsCk_zhr0S_u4ZIocA5ggRZKA8l5pernIcGKGbW6dyTDGRhgmbPzov4_8jSqxJVCs",
+    src: "/images/collections/amber_gold.jpeg",
   },
 ];
 

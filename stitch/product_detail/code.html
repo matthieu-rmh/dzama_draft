@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#001c39",
+              "outline": "#9b8f78",
+              "on-tertiary-container": "#4b5961",
+              "surface": "#07151b",
+              "on-primary-container": "#6e5400",
+              "surface-container-lowest": "#031016",
+              "on-primary": "#3e2e00",
+              "secondary": "#a4c9ff",
+              "surface-dim": "#07151b",
+              "on-tertiary": "#243239",
+              "surface-container": "#132128",
+              "tertiary": "#ddecf5",
+              "inverse-surface": "#d6e5ee",
+              "primary": "#ffe8b7",
+              "on-tertiary-fixed-variant": "#3b4950",
+              "on-secondary-fixed-variant": "#004883",
+              "primary-fixed-dim": "#f6bf00",
+              "outline-variant": "#4f4632",
+              "primary-container": "#ffc600",
+              "on-primary-fixed-variant": "#594400",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#243239",
+              "surface-bright": "#2d3b42",
+              "on-secondary-container": "#d0e1ff",
+              "on-error": "#690005",
+              "secondary-fixed-dim": "#a4c9ff",
+              "on-surface-variant": "#d3c5ab",
+              "surface-container-highest": "#29373e",
+              "secondary-fixed": "#d4e3ff",
+              "error-container": "#93000a",
+              "on-secondary": "#00315d",
+              "surface-container-high": "#1e2c33",
+              "surface-container-low": "#0f1d24",
+              "primary-fixed": "#ffdf96",
+              "tertiary-fixed-dim": "#bac9d1",
+              "secondary-container": "#0164b4",
+              "background": "#07151b",
+              "surface-variant": "#29373e",
+              "surface-tint": "#f6bf00",
+              "tertiary-container": "#c1d0d9",
+              "tertiary-fixed": "#d6e5ee",
+              "on-surface": "#d6e5ee",
+              "error": "#ffb4ab",
+              "on-primary-fixed": "#251a00",
+              "inverse-primary": "#765a00",
+              "on-tertiary-fixed": "#0f1d24",
+              "on-background": "#d6e5ee"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      .bg-gradient-primary {
+        background: linear-gradient(45deg, #f6bf00, #ffe8b7);
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-950/80 backdrop-blur-xl shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-amber-500 tracking-[0.2em] uppercase">Dzama</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif text-lg tracking-wide text-amber-400 border-b border-amber-400 pb-1" href="#">Collections</a>
+<a class="font-serif text-lg tracking-wide text-stone-400 hover:text-stone-200 transition-colors" href="#">Héritage</a>
+<a class="font-serif text-lg tracking-wide text-stone-400 hover:text-stone-200 transition-colors" href="#">Réserve de Cave</a>
+<a class="font-serif text-lg tracking-wide text-stone-400 hover:text-stone-200 transition-colors" href="#">Cocktails</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-amber-500 hover:text-amber-300 transition-all duration-300 scale-95 active:opacity-80 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="text-amber-500 hover:text-amber-300 transition-all duration-300 scale-95 active:opacity-80 transition-transform relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-bold px-1 rounded-full">1</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Product Section -->
+<section class="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<!-- Left: Product Image -->
+<div class="md:col-span-7 flex justify-center relative group">
+<div class="absolute inset-0 bg-surface-container-low rounded-xl -z-10 translate-x-4 translate-y-4"></div>
+<img alt="Dzama Cuvée Noire bottle" class="w-full h-auto max-h-[819px] object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]" data-alt="Premium dark rum bottle with elegant gold lettering on a dark textured marble surface, warm cinematic side lighting highlighting the amber liquid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHciE1UGWZ9iMgN0mrxJZa7rXKySFu1f3lCH2V2jay-IqeBGrqvE8eGJY0lv3eA047_6TDXesImG-0LfyUot6ELC-3A_XDEKhDnFW7_q9VeM3THX5Js0d2BEcbOQq6ybNsw7KtQ13Vpo-WXn1ydb2uvryq0xnPrdSJbfElwUS2eNk3OKGgg2tZDJ9kuhF3gJjvw3LCTF-k8ckgO8pc3SE47L13ey8YAD-QsyQi63uvlt2RbDMalIRaWgciXqDtBsuoiP_L_hWTxwE"/>
+</div>
+<!-- Right: Product Details -->
+<div class="md:col-span-5 space-y-10">
+<div class="space-y-4">
+<span class="font-label text-sm tracking-[0.2em] uppercase text-primary">Collection Prestige</span>
+<h1 class="font-headline text-5xl md:text-7xl leading-tight text-on-surface">Dzama Cuvée Noire</h1>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">Un chef-d'œuvre de la distillation malgache, vieilli en fûts de chêne du Limousin carbonisés pour atteindre un profil d'une complexité inégalée et d'une douceur veloutée.</p>
+</div>
+<div class="grid grid-cols-3 gap-4 border-l border-outline-variant/20 pl-8">
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Nez</span>
+<p class="font-body text-sm text-primary">Vanille &amp; Épices</p>
+</div>
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Palais</span>
+<p class="font-body text-sm text-primary">Chêne Riche</p>
+</div>
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Finale</span>
+<p class="font-body text-sm text-primary">Fumée Mielleuse</p>
+</div>
+</div>
+<div class="flex items-center gap-8 py-6">
+<span class="font-headline text-4xl text-on-surface">$185.00</span>
+<button class="flex-1 py-5 bg-gradient-primary text-on-primary font-label text-sm font-bold uppercase tracking-widest rounded-md hover:opacity-90 transition-all active:scale-95 flex items-center justify-center gap-3"><span class="material-symbols-outlined text-xl" data-icon="add_shopping_cart">add_shopping_cart</span> Ajouter à la cave</button>
+</div>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<p class="text-sm">Inclut un certificat d'authenticité &amp; carafe numérotée à la main</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tasting Rituals Section (Editorial Broken Grid) -->
+<section class="mt-48 bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="z-10 space-y-8">
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface leading-tight">Accords Parfaits</h2>
+<p class="font-body text-lg text-on-surface-variant max-w-lg leading-relaxed">L'amertume du chocolat d'origine unique reflète les notes de chêne brûlé de la Cuvée Noire.</p>
+<div class="inline-flex items-center gap-4 text-primary group cursor-pointer">
+<span class="font-label uppercase tracking-widest text-sm">Explorer le guide</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<img alt="Professional rum tasting" class="rounded-xl shadow-2xl relative z-0 transform md:rotate-2 hover:rotate-0 transition-transform duration-700" data-alt="Close up of a crystal tulip glass with amber rum, golden light reflecting on the liquid surface against a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUHUrHhJHDs6Ze_y1TOdn7qPNSUEil_k6Z31GvbgXS-Jzt460f4_ccw1qi0kiSJ0ZIAn-UnLQBV8xhmrS_1b5Qt1QkaWVLgQ1aF8NE4SZ7jvj-GloVbE76qLBWvpY7F24SSyTOpnB_kWBbTXmCZZdC7JR0O1XT9lgOYX7eI3j210z-lqUBfArp4eijFUq0LOgUQjEZX89g0c6RI9INrFSUr2QNc5rAM9MjbTZUyO38agvODWS7DX6FubyRJ1lALU7fTsnaW_t29iw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Perfect Pairings (Bento-inspired Grid) -->
+<section class="py-32 max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="mb-16 flex justify-between items-end">
+<div class="space-y-4">
+<span class="font-label text-sm tracking-[0.2em] uppercase text-outline">Sublimer l'Expérience</span>
+<h2 class="font-headline text-4xl text-on-surface">Accords Parfaits</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pairing 1 -->
+<div class="bg-surface-container group overflow-hidden rounded-xl">
+<div class="h-80 overflow-hidden">
+<img alt="Dark chocolate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" data-alt="Pieces of artisanal high-percentage dark chocolate on a dark slate board with cocoa powder dusting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI5Z8a_mNrjrDA9vwj9apDD4_hEzjEvs5pHWV0-EpPiBD7GymC4zD0nSQa5PrZTy1O1EbkcN-T24Jnb_yCDZrJ1HRQKWYpGqOkl3_zRRnzR2awxc-nKHIGfRb-MzwuvKce_8zHjt2P1jyuNCUE-HwG4Y6TqKhF9VC40PqW7lDzd2DwORZ20uiFBB5HpOCM8e7Q6CbsazjGjmry4U520czRDD5DR-M18WxuZNc0Q7oqGbRSAfoLfRS4w3ApPylt0cV15jFW1DT94Bo"/>
+</div>
+<div class="p-8 space-y-3">
+<h3 class="font-headline text-xl text-primary">Cacao de Madagascar 85%</h3>
+<p class="font-body text-sm text-on-surface-variant">L'amertume du chocolat d'origine unique reflète les notes de chêne brûlé de la Cuvée Noire.</p>
+</div>
+</div>
+<!-- Pairing 2 -->
+<div class="bg-surface-container group overflow-hidden rounded-xl">
+<div class="h-80 overflow-hidden">
+<img alt="Premium cigar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" data-alt="A hand-rolled premium cigar resting on a crystal ashtray with thin wisps of smoke in a moody dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtpltn4E6g3V6diLbsZ3uM4oXgfxqiKpo5A8LKWzMeC5k2rmdUHdUpQ5MQPI_zredXXxOpuzCPPFGHFIIHvN6mfDW7K2cLd-I6UYjDao5iDp9e-gvEUDoq5PKfCnQ-Je8c4WkUd01wBY5CvMxW-ggj50l0txQ7CafPG2_LnG-6RLhmAbEjUjgX8ZVQQh6EJtgzsPATaPmE7ko9ekHnOdk9bD88ofKqLpD_zjYCyrl2MgdVWH1JL8cLLf3ESKv_3JA9OjrMc202Hrw"/>
+</div>
+<div class="p-8 space-y-3">
+<h3 class="font-headline text-xl text-primary">Habano de Collection</h3>
+<p class="font-body text-sm text-on-surface-variant">Un cigare corsé complète la finale épicée sans dominer la vanille délicate.</p>
+</div>
+</div>
+<!-- Pairing 3 -->
+<div class="bg-surface-container group overflow-hidden rounded-xl">
+<div class="h-80 overflow-hidden">
+<img alt="Tropical fruit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" data-alt="Dried slices of caramelized pineapple and mango arranged artistically on a dark ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Z8J31uaxw26EqsMecLErSbgySzCrzBaK48VMTifzESoMRDmu5bz040AQmvwK8IiTafjs7fAvUpooqoCTnESDmOE0mzoLZBTMvX4GAmP-b3ZyIH4OP8ocarh-hXIyS-Z9T5ftLEstvTjwirLjIdbyDltHjWosSPZd8z7wL7soqL0ybh0mmKck8KKm64MO2VPv0IXmhkIdJgDVLsA7dhK7An1dPYxGSii-TLBHFmz_1b2urBrf8cR0MScqFUTd0fgRuBf_0bCrjuA"/>
+</div>
+<div class="p-8 space-y-3">
+<h3 class="font-headline text-xl text-primary">Fruits Tropicaux Caramélisés</h3>
+<p class="font-body text-sm text-on-surface-variant">L'ananas ou la mangue séchée rehaussent la douceur inhérente de la canne malgache.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specification Section -->
+<section class="py-32 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="space-y-12">
+<h2 class="font-headline text-3xl text-on-surface">Les Notes du Distillateur</h2>
+<div class="space-y-6">
+<div class="flex justify-between border-b border-outline-variant/10 pb-4">
+<span class="font-label text-xs uppercase tracking-widest text-outline">Âge</span>
+<span class="font-body text-on-surface">Système Solera 15 Ans</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-4">
+<span class="font-label text-xs uppercase tracking-widest text-outline">Origine</span>
+<span class="font-body text-on-surface">Madagascar, Nosy Boraha</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-4">
+<span class="font-label text-xs uppercase tracking-widest text-outline">Degré</span>
+<span class="font-body text-on-surface">45% Alc/Vol</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-4">
+<span class="font-label text-xs uppercase tracking-widest text-outline">Type de fût</span>
+<span class="font-body text-on-surface">Ex-Cognac, Chêne Limousin Français</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-12 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<h3 class="font-headline text-2xl mb-6 text-primary">Gestion de la Cave</h3>
+<p class="font-body text-on-surface-variant mb-8 leading-relaxed">Pour maintenir l'intégrité de la Cuvée Noire, conservez-la en position verticale à l'abri de la lumière directe du soleil à une température constante de 16-18°C. Une fois ouvert, le processus d'oxydation adoucira légèrement les tanins du chêne sur 6 mois.</p>
+<button class="font-label text-xs uppercase tracking-widest py-3 px-6 border border-outline/30 hover:border-primary transition-colors text-primary">Télécharger la fiche technique</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 px-12 mt-32 bg-stone-950 border-t border-stone-800/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-7xl mx-auto text-center md:text-left">
+<div>
+<span class="text-3xl font-serif text-amber-500 mb-8 block">Dzama</span>
+<p class="text-stone-500 font-sans text-xs tracking-widest uppercase leading-relaxed">© 2024 Dzama Rhum. Créé avec patience.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-amber-500 font-sans text-sm tracking-widest uppercase mb-4">Le Domaine</span>
+<a class="text-stone-500 hover:text-amber-200 transition-opacity underline-offset-8 decoration-amber-500/50" href="#">Visite de la Distillerie</a>
+<a class="text-stone-500 hover:text-amber-200 transition-opacity underline-offset-8 decoration-amber-500/50" href="#">Durabilité</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-amber-500 font-sans text-sm tracking-widest uppercase mb-4">Conciergerie</span>
+<a class="text-stone-500 hover:text-amber-200 transition-opacity underline-offset-8 decoration-amber-500/50" href="#">Livraison &amp; Retours</a>
+<a class="text-stone-500 hover:text-amber-200 transition-opacity underline-offset-8 decoration-amber-500/50" href="#">Mentions Légales</a>
+<a class="text-stone-500 hover:text-amber-200 transition-opacity underline-offset-8 decoration-amber-500/50" href="#">Politique de Confidentialité</a>
+</div>
+<div class="flex flex-col gap-6">
+<span class="text-amber-500 font-sans text-sm tracking-widest uppercase">Newsletter</span>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-outline-variant text-xs py-2 focus:outline-none focus:border-primary transition-colors text-on-surface" placeholder="REJOINDRE LA LISTE DE LA CAVE" type="email"/>
+<button class="absolute right-0 top-1 text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="flex gap-4 justify-center md:justify-start">
+<span class="material-symbols-outlined text-stone-500 hover:text-primary cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-primary cursor-pointer" data-icon="public">public</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

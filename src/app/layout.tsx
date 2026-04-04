@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CartProvider } from "./context/CartContext";
 
 export const metadata: Metadata = {
   title: "Dzama Rhum | The Spirit of Madagascar",
   description:
     "Vieilli dans des fûts de chêne d'exception où la brise marine rencontre le parfum de la vanille sauvage. Découvrez un rhum défini par la patience et la précision.",
+  icons: {
+    icon: "/images/logo/dzama_rhum_logo.svg",
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +28,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body><CartProvider>{children}</CartProvider></body>
     </html>
   );
 }

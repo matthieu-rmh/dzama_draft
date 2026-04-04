@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dzama Rhum | The Cellar Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#001c39",
+                        "outline": "#9b8f78",
+                        "on-tertiary-container": "#4b5961",
+                        "surface": "#07151b",
+                        "on-primary-container": "#6e5400",
+                        "surface-container-lowest": "#031016",
+                        "on-primary": "#3e2e00",
+                        "secondary": "#a4c9ff",
+                        "surface-dim": "#07151b",
+                        "on-tertiary": "#243239",
+                        "surface-container": "#132128",
+                        "tertiary": "#ddecf5",
+                        "inverse-surface": "#d6e5ee",
+                        "primary": "#ffe8b7",
+                        "on-tertiary-fixed-variant": "#3b4950",
+                        "on-secondary-fixed-variant": "#004883",
+                        "primary-fixed-dim": "#f6bf00",
+                        "outline-variant": "#4f4632",
+                        "primary-container": "#ffc600",
+                        "on-primary-fixed-variant": "#594400",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#243239",
+                        "surface-bright": "#2d3b42",
+                        "on-secondary-container": "#d0e1ff",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#a4c9ff",
+                        "on-surface-variant": "#d3c5ab",
+                        "surface-container-highest": "#29373e",
+                        "secondary-fixed": "#d4e3ff",
+                        "error-container": "#93000a",
+                        "on-secondary": "#00315d",
+                        "surface-container-high": "#1e2c33",
+                        "surface-container-low": "#0f1d24",
+                        "primary-fixed": "#ffdf96",
+                        "tertiary-fixed-dim": "#bac9d1",
+                        "secondary-container": "#0164b4",
+                        "background": "#07151b",
+                        "surface-variant": "#29373e",
+                        "surface-tint": "#f6bf00",
+                        "tertiary-container": "#c1d0d9",
+                        "tertiary-fixed": "#d6e5ee",
+                        "on-surface": "#d6e5ee",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#251a00",
+                        "inverse-primary": "#765a00",
+                        "on-tertiary-fixed": "#0f1d24",
+                        "on-background": "#d6e5ee"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .glass-nav {
+            background: rgba(7, 21, 27, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255, 198, 0, 0.4);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #031016;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4f4632;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-950/80 backdrop-blur-xl shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-amber-500 tracking-[0.2em] uppercase">Dzama</div>
+<div class="hidden md:flex items-center space-x-12 font-serif text-lg tracking-wide">
+<a class="text-amber-400 border-b border-amber-400 pb-1" href="#">Collections</a>
+<a class="text-stone-400 hover:text-stone-200 transition-colors hover:text-amber-300 transition-all duration-300" href="#">Héritage</a>
+<a class="text-stone-400 hover:text-stone-200 transition-colors hover:text-amber-300 transition-all duration-300" href="#">Réserve de la Cave</a>
+<a class="text-stone-400 hover:text-stone-200 transition-colors hover:text-amber-300 transition-all duration-300" href="#">Cocktails</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="scale-95 active:opacity-80 transition-transform text-amber-400">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="scale-95 active:opacity-80 transition-transform text-amber-400 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+<!-- Header & Breadcrumbs -->
+<header class="mb-16">
+<nav class="mb-4 flex items-center space-x-2 text-label text-[10px] uppercase tracking-[0.2em] text-outline">
+<a class="hover:text-primary transition-colors" href="#">Accueil</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-on-surface-variant">Collections</span>
+</nav>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-glow mb-4">La Cave</h1>
+<p class="max-w-2xl text-on-surface-variant font-body leading-relaxed text-lg">Découvrez notre collection de l'excellence malgache. Chaque bouteille est un témoignage de l'art patient du vieillissement tropical et du terroir unique de l'île.</p>
+</header>
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0 space-y-12">
+<section>
+<h3 class="text-label text-xs uppercase tracking-[0.2em] text-primary-fixed-dim mb-6">Filtrer par âge</h3>
+<div class="space-y-4">
+<label class="flex items-center group cursor-pointer">
+<input class="rounded-none border-outline-variant bg-transparent text-primary-container focus:ring-offset-surface focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="ml-3 text-on-surface-variant group-hover:text-primary transition-colors text-sm">3 - 5 Ans</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="rounded-none border-outline-variant bg-transparent text-primary-container focus:ring-offset-surface focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="ml-3 text-on-surface-variant group-hover:text-primary transition-colors text-sm">6 - 10 Ans</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input checked="" class="rounded-none border-outline-variant bg-transparent text-primary-container focus:ring-offset-surface focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="ml-3 text-on-surface-variant group-hover:text-primary transition-colors text-sm">15 - 25 Ans</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="rounded-none border-outline-variant bg-transparent text-primary-container focus:ring-offset-surface focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="ml-3 text-on-surface-variant group-hover:text-primary transition-colors text-sm">Réserve Millésimée</span>
+</label>
+</div>
+</section>
+<section>
+<h3 class="text-label text-xs uppercase tracking-[0.2em] text-primary-fixed-dim mb-6">Profil de douceur</h3>
+<div class="space-y-4">
+<label class="flex items-center group cursor-pointer">
+<input class="border-outline-variant bg-transparent text-primary-container focus:ring-offset-surface focus:ring-primary h-4 w-4" name="sweetness" type="radio"/>
+<span class="ml-3 text-on-surface-variant group-hover:text-primary transition-colors text-sm">Sec &amp; Épicé</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="border-outline-variant bg-transparent text-primary-container focus:ring-offset-surface focus:ring-primary h-4 w-4" name="sweetness" type="radio"/>
+<span class="ml-3 text-on-surface-variant group-hover:text-primary transition-colors text-sm">Chêne Équilibré</span>
+</label>
+<label class="flex items-center group cursor-pointer">
+<input class="border-outline-variant bg-transparent text-primary-container focus:ring-offset-surface focus:ring-primary h-4 w-4" name="sweetness" type="radio"/>
+<span class="ml-3 text-on-surface-variant group-hover:text-primary transition-colors text-sm">Miel &amp; Vanille</span>
+</label>
+</div>
+</section>
+<section>
+<h3 class="text-label text-xs uppercase tracking-[0.2em] text-primary-fixed-dim mb-6">Gamme de prix</h3>
+<div class="px-2">
+<input class="w-full h-1 bg-surface-container-highest appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between mt-4 text-[10px] text-outline font-label tracking-tighter">
+<span>$40</span>
+<span>$1,200</span>
+</div>
+</div>
+</section>
+<div class="pt-8">
+<button class="w-full border border-outline/30 py-4 text-label text-[10px] uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-500">Réinitialiser les filtres</button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<div class="flex justify-between items-end mb-12">
+<p class="text-sm font-label text-outline uppercase tracking-widest">Affichage de 12 artefacts</p>
+<div class="flex items-center space-x-4">
+<span class="text-xs font-label uppercase text-on-surface-variant">Trier par :</span>
+<select class="bg-transparent border-none text-xs font-label uppercase tracking-widest text-primary focus:ring-0 cursor-pointer">
+<option>Exclusivité</option>
+<option>Prix : Croissant</option>
+<option>Prix : Décroissant</option>
+<option>Âge : Le plus ancien</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-24 gap-x-12">
+<!-- Product Card 1 -->
+<div class="group relative">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden relative mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="luxury dark glass bottle of aged amber rum on a black marble pedestal with golden rim lighting and dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkNZZBhKWt910gPCY5ZMiKo7-alq4v2e3RJLfpHPgw02m-LzQ79UkN7rtiL6bnhu-IuC2EMpWAa0JDLJbDfm76xD-aCFHhRo1Wh057lqphxUDDqDdG6oVeaysSH4KzU8kQmE60jt1LVKjj7qUC0h3Tp-TPdhtT_p8uVOKjDTbp-5bCcutMX5d6S5DfKJWbbFR3Qh4iEHveG33mQ7QtMvXlbxu0_A9ctNKRv6DtqW5MlSNcB5zW14q-HbKGZGcKA0J9_eox15A-Ggw"/>
+<!-- Quick View Overlay -->
+<div class="absolute inset-0 bg-surface-container-lowest/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
+<button class="bg-primary text-on-primary px-8 py-3 font-label text-[10px] uppercase tracking-[0.2em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Aperçu rapide</button>
+</div>
+<div class="absolute top-4 left-4 bg-secondary-container px-3 py-1">
+<span class="text-[9px] uppercase tracking-widest font-bold text-white">Réserve Rare</span>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline-variant font-label">Collection Prestige</p>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Dzama Cuvée Noire</h3>
+<div class="flex justify-between items-end pt-4">
+<span class="text-xl font-headline text-primary-fixed-dim">$185.00</span>
+<button class="text-outline hover:text-primary transition-colors">Aperçu rapide</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden relative mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="close up of a rum bottle with a wax seal sitting in front of a blurred mahogany library background rich brown tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsAmKit2tv16XWqajWW01Qil4Xv1ELICN8IT2jGKVldvno0OSY_4_JNp7TsDehC65hhR396bLUh03nBCVmVnIuDgB2r1y5heuK5gEqfIXkMZgZZm4HDasAjZnirYQwiPzq1fTnIgY_knNWaDS9tau2s-QuGszXOPYoG-QSftOQnzD-J3W79M7qzgz6M5jxkO2pkd-SX7VIoMgviE5LJAi15W-5YtykdMEQA1byzraIXXpmdcMjsu4UewlskuqewXD3_6j0SL5s2Y"/>
+<div class="absolute inset-0 bg-surface-container-lowest/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
+<button class="bg-primary text-on-primary px-8 py-3 font-label text-[10px] uppercase tracking-[0.2em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Aperçu rapide</button>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline-variant font-label">Série Millésimée</p>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Dzama Vanille 10 Yr</h3>
+<div class="flex justify-between items-end pt-4">
+<span class="text-xl font-headline text-primary-fixed-dim">$82.00</span>
+<button class="text-outline hover:text-primary transition-colors">Aperçu rapide</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden relative mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="elegant decanter filled with golden rum on an antique desk next to a leather bound book with soft window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV-DJNDAVU7m7_DI4MFzbyWBPpJvtor47_xLAUverNZJpjLhy3zyxLjcoNT_jdMX2F3sTw5xYY-fhZmuP6zHMx0PidNbP5p_r-JzQAl-CuC4Azoo1jxOEhXod2m2URtAOBn0wjA1s3behpxWixHxGU1BmrGDtWluAoQY-DWzdZhL66wc_o5jLG3eFYcgdvMNdGxxPX_uuBh2wWeD2ynS6Rzp7qLFtzPZE07_ltBNJCx94G1xl7zpWqqDzTTaD4IIFqRX2Rz9bb3wk"/>
+<div class="absolute inset-0 bg-surface-container-lowest/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
+<button class="bg-primary text-on-primary px-8 py-3 font-label text-[10px] uppercase tracking-[0.2em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Aperçu rapide</button>
+</div>
+<div class="absolute top-4 left-4 bg-primary-container px-3 py-1">
+<span class="text-[9px] uppercase tracking-widest font-bold text-on-primary">Édition Limitée</span>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline-variant font-label">Maître de Chai</p>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Dzama Millésime 1998</h3>
+<div class="flex justify-between items-end pt-4">
+<span class="text-xl font-headline text-primary-fixed-dim">$425.00</span>
+<button class="text-outline hover:text-primary transition-colors">Aperçu rapide</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden relative mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="dramatic macro shot of condensation on a cold rum bottle with warm interior bar lighting reflecting on the glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA22PCQ3SKTx1e1KXfazbAI4oODcM7EZll37daPjtI8NA9G6N2G8B9N40f0kFqVzhx57w03M6EL26RMOjXzL5PyCZFe5iS6XmFnmcOcuEJHeGzZEtzo0f8lRjexhC3cR_UGwkEb2wjsSKUF8teFvLtTKxk9SjH9FEVBiWjDFdfOoZw8RNslNJ7Ra6IjpTkIzXQFNKBO4tLZb5vZvIJGu3ukFFc--R5jbQJc4SDOvWAqFV9Fckta2SRiKM8KN0EUs-yKhzVFwWos2TE"/>
+<div class="absolute inset-0 bg-surface-container-lowest/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
+<button class="bg-primary text-on-primary px-8 py-3 font-label text-[10px] uppercase tracking-[0.2em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Aperçu rapide</button>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline-variant font-label">Édition des Fondateurs</p>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Dzama Vieux 6 Ans</h3>
+<div class="flex justify-between items-end pt-4">
+<span class="text-xl font-headline text-primary-fixed-dim">$64.00</span>
+<button class="text-outline hover:text-primary transition-colors">Aperçu rapide</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden relative mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="artisan rum bottle with hand-written label detail on textured cream paper against dark moody shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa689rTgZodT0bdVrPmDmGecS1Jss55tiBmm2DOHUIGyA83U_orBYdTSRdTZNId67nbrKLWXCB09bAcsOn8Ue6xzQsuVS1RO-7AUDZtlhGYDl7fg_hW4A7OLTJYGAzP3Su6qkuFd6jFuYJhsi0PnNMp7DQCN3iVfhP5vwoVtoZ1fgfjKEYuAoMonviHmQHIvZWikgwkzlcew44-AofNk4sdNw1O-tSLJhaN5vTtg_vV0cUKG_Z6DJVXvK7ZBOyYyihYreimHD8ftU"/>
+<div class="absolute inset-0 bg-surface-container-lowest/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
+<button class="bg-primary text-on-primary px-8 py-3 font-label text-[10px] uppercase tracking-[0.2em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Aperçu rapide</button>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline-variant font-label">Exclusivité Distillerie</p>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Dzama Blanc Intense</h3>
+<div class="flex justify-between items-end pt-4">
+<span class="text-xl font-headline text-primary-fixed-dim">$45.00</span>
+<button class="text-outline hover:text-primary transition-colors">Aperçu rapide</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden relative mb-6">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="luxury gift box for rum with gold foil stamping and dark velvet lining in a moody studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUTpAv4686Jgb26jBIjTCrZvcf7gdeC3dMjXTO-Ax9UKS3Sf4Th9fPG6AFxwyqLDt8GgLCLgFw38c0M9pUTKnEQ0NEmWRM2miOUV3Jpix_CA_8Ent8EvAfrOD9bPn4lDKnU2znisS4C-sGfuA7rwHc8q7zvK0Ho-_iovn402uwdobtIXhk9VIb7TJMg_yYgzlVCAaPBNer-UOEPnrhNAMBOWlaBwCHko0LpGzDywRss_lzEaQ4iS7zkfbxwcocIKl_bAtwxMxxYok"/>
+<div class="absolute inset-0 bg-surface-container-lowest/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-sm">
+<button class="bg-primary text-on-primary px-8 py-3 font-label text-[10px] uppercase tracking-[0.2em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Aperçu rapide</button>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-[10px] uppercase tracking-[0.3em] text-outline-variant font-label">Réserve Impériale</p>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Dzama Nosy Boraha 20</h3>
+<div class="flex justify-between items-end pt-4">
+<span class="text-xl font-headline text-primary-fixed-dim">$295.00</span>
+<button class="text-outline hover:text-primary transition-colors">Aperçu rapide</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex items-center justify-center space-x-8">
+<button class="text-outline hover:text-primary flex items-center group transition-colors">
+<span class="material-symbols-outlined mr-2 transition-transform group-hover:-translate-x-2">arrow_back</span>
+<span class="font-label text-[10px] uppercase tracking-widest">Ancien</span>
+</button>
+<div class="flex items-center space-x-6 font-label text-[10px] uppercase tracking-widest text-outline">
+<span class="text-primary border-b border-primary pb-1">01</span>
+<span class="hover:text-on-surface cursor-pointer">02</span>
+<span class="hover:text-on-surface cursor-pointer">03</span>
+<span>...</span>
+<span class="hover:text-on-surface cursor-pointer">12</span>
+</div>
+<button class="text-outline hover:text-primary flex items-center group transition-colors">
+<span class="font-label text-[10px] uppercase tracking-widest">Futur</span>
+<span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 w-full py-24 px-12 mt-32 border-t border-stone-800/30">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 text-center md:text-left">
+<div class="col-span-1 md:col-span-1">
+<span class="text-3xl font-serif text-amber-500 mb-8 block">Dzama</span>
+<p class="text-stone-500 text-xs leading-loose uppercase tracking-widest">L'esprit authentique de Madagascar, distillé et vieilli avec une patience inégalée.</p>
+</div>
+<div class="space-y-4">
+<h4 class="text-amber-500 font-sans text-sm tracking-widest uppercase mb-6">Découvrir</h4>
+<a class="block text-stone-500 text-sm tracking-widest uppercase hover:text-amber-200 transition-opacity" href="#">Visite de la Distillerie</a>
+<a class="block text-stone-500 text-sm tracking-widest uppercase hover:text-amber-200 transition-opacity" href="#">Durabilité</a>
+<a class="block text-stone-500 text-sm tracking-widest uppercase hover:text-amber-200 transition-opacity" href="#">Héritage</a>
+</div>
+<div class="space-y-4">
+<h4 class="text-amber-500 font-sans text-sm tracking-widest uppercase mb-6">Assistance</h4>
+<a class="block text-stone-500 text-sm tracking-widest uppercase hover:text-amber-200 transition-opacity" href="#">Livraison &amp; Retours</a>
+<a class="block text-stone-500 text-sm tracking-widest uppercase hover:text-amber-200 transition-opacity" href="#">Mentions Légales</a>
+<a class="block text-stone-500 text-sm tracking-widest uppercase hover:text-amber-200 transition-opacity" href="#">Politique de Confidentialité</a>
+</div>
+<div class="space-y-4">
+<h4 class="text-amber-500 font-sans text-sm tracking-widest uppercase mb-6">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-stone-800 py-3 text-xs tracking-widest text-on-surface focus:border-amber-500 focus:ring-0 transition-colors" placeholder="Rejoignez le cercle restreint" type="email"/>
+<button class="absolute right-0 bottom-3 text-amber-500">
+<span class="material-symbols-outlined">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-24 text-center border-t border-stone-900 pt-12">
+<p class="text-stone-500 text-sm tracking-widest uppercase">© 2024 Rhum Dzama. Élaboré avec patience.</p>
+</div>
+</footer>
+</body></html>

@@ -70,7 +70,7 @@ export default function HeritagePage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover grayscale opacity-80 mix-blend-luminosity"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3QxPjrgRfgmEQp0JCjat35gvf2xWz5DFw3oPwIDCU-zjJGyJxgFIuOtXQBejomoneGv47SoIm8De7YKZw5NpemcYtiHjkUTzs2b94vzhcxR2TJbFrYrjKt9Punk-IMyMNV4jRQpgy7IqwzstqJbpf3Mhmvc6ybW1pdTxxhMvOo1azFJjhEq3xYAvNGw8nNtTW5UTcO4DSsNzBd7ZSwo0PRQyFEpwoM-BHMcVqZSsGR9_Y-pcNqTPRQlbzUFyyBPPLevj8rD6ExEs"
+                  src="/images/heritage/lucien_fohine_cropped.jpeg"
                   alt="Portrait de Lucien Fohine, fondateur de Dzama"
                 />
               </div>
@@ -78,8 +78,8 @@ export default function HeritagePage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9mK7HsvZ72sy8oN6PVLUAXO9VyQleDlJm4lor8v0i4yXcBipVkpAMAg0MbXB0jSrkXJC1T_zQpBN9LBRVFdXqNCj10j1o41h7gFH8Py69ihPKUrmB2dEeTI1smnmSDUM8SVLAZf0IR0TVQbeh8c-fyQYrrlLdVZzKfhfeiIuY-Eh1UpIy2cXSmM4wuc5lJiIuRMBzmMl9nhqNTzNK0YrmgQHV4ptoo4ii40jFVE5Yv04IF6a0kmWm2Y91cvbzA7bNOvKMnEyrKl0"
-                  alt="Rhum Dzama dans un verre en cristal"
+                  src="/images/heritage/futs.jpg"
+                  alt="Fûts de vieillissement Dzama"
                 />
               </div>
             </div>
@@ -105,10 +105,10 @@ export default function HeritagePage() {
                   du sol volcanique à l&apos;influence aromatique de l&apos;ylang-ylang
                   sauvage.
                 </p>
-                <div className="pt-8">
-                  <button className="px-8 py-4 bg-gradient-to-r from-primary-fixed-dim to-primary text-on-primary font-bold uppercase tracking-widest text-xs rounded-md shadow-2xl hover:brightness-110 transition-all">
+                <div className="pt-8 md:pl-48">
+                  <a href="#milestones" className="inline-block px-8 py-4 bg-gradient-to-r from-primary-fixed-dim to-primary text-on-primary font-bold uppercase tracking-widest text-xs rounded-md shadow-2xl hover:brightness-110 transition-all">
                     Découvrir la Chronologie
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -225,7 +225,7 @@ export default function HeritagePage() {
         </section>
 
         {/* Milestones */}
-        <section className="py-24 md:py-48 px-6 md:px-24 bg-surface">
+        <section id="milestones" className="py-24 md:py-48 px-6 md:px-24 bg-surface">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
               <span className="font-label text-outline text-xs tracking-widest uppercase mb-4 block">
