@@ -17,7 +17,7 @@ const navLinks = [
 const activeClass =
   "text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.8)] transition-colors";
 const inactiveClass =
-  "text-stone-100 hover:text-white transition-colors";
+  "text-stone-100 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
