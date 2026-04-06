@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative h-screen w-full flex items-center overflow-hidden">
       <div className="absolute inset-[-15%] z-0">
         <Image
-          src="/images/homepage_sections/vdz_hero_section_upscayled.png"
+          src="/images/homepage_sections/vdz_hero_section.webp"
           alt="Bouteille de rhum Dzama sur marbre sombre avec éclairage dramatique"
           fill
           className="object-cover object-center"
